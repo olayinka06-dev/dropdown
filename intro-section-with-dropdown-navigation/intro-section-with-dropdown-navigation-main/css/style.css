@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', sans-serif;
+}
+body{
+    transition: all 0.3s ease;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 90%);
+    max-width: 1440px;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: hsl(0, 0%, 90%);
+    height: 60px;
+    padding: 0 2rem;
+    transition: all 3s ease;
+
+}
+.nav-mobile{
+    list-style: none;
+}
+.nav-item{
+    margin-left: 5rem;
+    position: relative;
+    display: inline-block;
+}
+.nav-item:hover .dropdown-content{
+    display: block;
+    height: 150px;
+
+}
+.highlight{
+    text-decoration: none;
+    line-height: 30px;
+}
+.dropdown-content{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: hsl(0, 0%, 98%);
+    min-width: 155px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    border-radius: 15px;
+    line-height: 20px;
+    transition: all 3s ease;
+    padding: 20px;
+}
+.nav-item a{
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-size: 17px;
+}
+.nav-item a:hover{
+    color: black;
+    font-size: 18px;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+}
+.dropdown-content-two{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0%, 98%);
+    min-width: 130px;
+    height: 120px !important;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+}
+.nav-item:hover .dropdown-content-two{
+    display: block;
+    height: 110px !important;
+    border-radius: 13px;
+    transition: all 3s ease;
+}
+.nav-end{
+    list-style: none;
+    margin-left: auto;
+
+}
+.nav-i-end{
+    margin-right: 30px;
+    display: inline-block;
+}
+.nav-i-end a{
+    font-size: 18px;
+    text-decoration: none;
+    color: hsl(0, 0%, 41%);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+}
+.nav-i-end a:hover{
+    color: black;
+    font-size: 20px;
+}
+.nav-button{
+    padding: 10px 15px;
+    border: 1px solid black;
+    background-color: transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
+    cursor: pointer;
+    color: hsl(0, 0%, 41%);
+    box-shadow: 0px 8px 8px rgba(0,0,0,0.2);
+    transition: font-size 3s;
+}
+.nav-button:hover{
+    background-color: white;
+    border: 1px dashed;
+    font-size: 17px;
+    transform: scale(105%);
+}
+.nav-show{
+    display: none;
+}
+.mobile-nav{
+    display: none;
+    transition: all 0.3s right ease;
+}
+.toggle{
+    position: absolute;
+    right: 5%;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: all .2s ease-in-out;
+    z-index: 1000;
+}
+.toggle div{
+    background-color: black;
+    height: 2px;
+    width: 30px;
+    transition: all .4s ease-in-out;
+}
+.firstr{
+    transform: rotate(-45deg) translate(1px, 11px);
+    width: 33px;
+    transition: all .4s ease-in-out;
+
+}
+.thirdr{
+    transform: rotate(45deg) translate(1px, -11px);
+    width: 33px;
+    transition: all .4s ease-in-out;
+}
+.secondr{
+    opacity: 0;
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 9rem;
+}
+.left{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+.head{
+    margin-top: 30px;
+}
+.head{
+    padding-right: 16rem;
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+}
+.right{
+    width: 100%;
+    height: 80vh;
+}
+.right img{
+    width: 100%;
+    height: 80vh;
+}
+.para{
+    padding-right: 5rem;    
+}
+.para p{
+    font-size: 18px;
+    color: hsl(0, 0%, 41%);
+    font-family: 'Epilogue', sans-serif;
+    font-weight: 500;
+}
+.ola{
+    padding: 13px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.ola:hover{
+    background-color: gray;
+    color: black;
+    
+}
+.last{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+
+}
+
+
+
+
+
+@media only screen and (max-width: 990px) {
+    .nav-item{
+        display: none;
+    }
+    .nav-mobile{
+        display: none;
+    }
+    .nav-end{
+        display: none;
+    }
+    .toggle{
+        display: flex;
+        cursor: pointer;
+    }
+    .mobile-nav{
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: white;
+        height: 100%;
+        width: 60%;
+        margin-right: -500px;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transition: all .9s ease-in-out;
+        list-style: none;
+        overflow-x: hidden;
+    }
+    .mobile-toggler{
+        margin-right: 0px;
+        padding: 80px 30px;
+
+    }
+    .mont{
+        border: none;
+        color: hsl(0, 0%, 41%);
+        background-color: white;
+        cursor: pointer;
+        font-size: 17px;
+    }
+    .mon{
+        border: none;
+        color: hsl(0, 0%, 41%);
+        background-color: white;
+        cursor: pointer;
+        font-size: 17px;
+    }
+    .mont:hover{
+        color: black;
+        font-size: 19px;
+    }
+    .mon:hover{
+        color: black;
+        font-size: 19px;
+    }
+    .dropdown-contenter{
+        display: none;
+        padding-left: 30px;
+        margin-top: 20px;
+        line-height: 45px;
+    }
+    .dropdown-contenter-two{
+        display: none;
+        padding-left: 30px;
+        margin-top: 15px;
+        line-height: 50px;
+    }
+    .jey{
+        transform: rotate(0deg);
+        transition: all .3s ease;
+    }
+    .jey-sub{
+        transform: rotate(180deg);
+    }
+    .fox{
+        transform: rotate(0deg);
+        transition: all .3s ease;
+    }
+    .fox-sub{
+        transform: rotate(180deg);
+    }
+    .herter{
+        display: block;
+    }
+    .hert{
+        display: block;
+    }
+    .item a{
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+        font-size: 18px;
+    }
+    .item a:hover{
+        font-size: 19px;
+        color: black;
+    }
+    .brainz a{
+        text-decoration: none;
+        color: hsl(0, 0%, 41%);
+        font-size: 18px;
+    }
+    .brainz a:hover{
+        font-size: 19px;
+        color: black;
+    }
+    .close{
+        position: absolute;
+        font-size: 35px;
+        right: 45px;
+        top: 19px;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+    .edge-toggler{
+        display: flex;
+    }
+    .nav-show{
+        display: none;
+    }
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 0 50px;
+    }
+    .head{
+        padding: 0;
+    }
+    .head h1{
+        font-weight: 700;
+        font-size: 35px;
+    }
+    .para{
+        text-align: center;
+        line-height: 25px;
+        padding: 0;
+    }
+    .left{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 50px;
+    }
+    .last{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 30px;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 100px;
+    }
+    .last img{
+        width: 100%;
+    }
+    .clean{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .fendor{
+        border: 1px solid black;
+        width: 100%;
+        padding: 12px;
+        background-color: transparent;
+        color: black;
+        border-radius: 12px;
+        font-size: 17px;
+    }
+    .fendor:hover{
+        background-color: gray;
+        color: white;
+        cursor: pointer;
+    }
+    
+}
+
+
+
